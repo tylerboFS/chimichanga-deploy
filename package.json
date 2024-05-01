@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./server.js",
     "seed": "node ./seed.js",
-    "seed:dev": "npx prisma migrate reset --force && node ./seed.js"
+    "seed:dev": "npx prisma migrate reset --force && node ./seed.js",
+    "build": "npm install && npm run seed:dev && cd ./client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
