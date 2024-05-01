@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./server.js",
-    "seed" : "node ./seed.js",
-    "seed:dev" : "npx prisma migrate reset --force && node ./seed.js"
+    "seed": "node ./seed.js",
+    "seed:dev": "npx prisma migrate reset --force && node ./seed.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,8 @@
   },
   "dependencies": {
     "@prisma/client": "^5.13.0",
-    "express": "^4.19.2"
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "path": "^0.12.7"
   }
 }

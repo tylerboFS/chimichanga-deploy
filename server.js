@@ -1,14 +1,14 @@
+require('dotenv').config();
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 8080
+const path = require('path');
 
 const { PrismaClient } = require('@prisma/client')
 
 const prisma = new PrismaClient()
 
-app.get('/', (req, res) => {
-  res.send('Hello You have reached the sever!')
-})
+app.use("/", express.static(path.join(__dirname, './client/dist')));
 
 app.get("/api/chimichangas", async (req, res) => {
   try{
