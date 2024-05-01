@@ -1,0 +1,22 @@
+{
+  "name": "deploy-chimichanga",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server.js",
+    "seed" : "node ./seed.js",
+    "seed:dev" : "npx prisma migrate reset --force && node ./seed.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prisma": "^5.13.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.13.0",
+    "express": "^4.19.2"
+  }
+}
